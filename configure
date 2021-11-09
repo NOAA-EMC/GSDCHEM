@@ -3386,7 +3386,8 @@ fi ;; #(
   intel) :
                         perf_opts="-O2"
                     if test "x$enable_safe_fp" != xno; then :
-  perf_opts="${perf_opts} -fp-model source -ftz -align array64byte -qno-opt-dynamic-align precise -fast-transcendentals -no-prec-div -no-prec-sqrt"
+  # perf_opts="${perf_opts} -fp-model source -ftz -align array64byte -qno-opt-dynamic-align precise -fast-transcendentals -no-prec-div -no-prec-sqrt"
+  perf_opts="${perf_opts} -fp-model source -ftz -align array64byte -qno-opt-dynamic-align precise -no-prec-div -no-prec-sqrt"
 fi ;; #(
   portland) :
                         perf_opts="-O2"
