@@ -121,7 +121,7 @@ AS_IF([test "x$enable_debug" = xyes],[
       [intel],     [dnl
                     perf_opts="-O2"
                     AS_IF([test "x$enable_safe_fp" != xno],
-                          [perf_opts="${perf_opts} -fp-model source -ftz -align array64byte -qno-opt-dynamic-align  precise -no-prec-div -no-prec-sqrt"],[])],
+                          [perf_opts="${perf_opts} -fp-model source -ftz -align array64byte -qno-opt-dynamic-align precise -no-prec-div -no-prec-sqrt"],[])],
       [portland],  [dnl
                     perf_opts="-O2"
                     AS_IF([test "x$enable_safe_fp" != xno],
