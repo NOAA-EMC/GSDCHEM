@@ -182,8 +182,8 @@ contains
            var_sum(i,j)=var_sum(i,j)+var(i,k,j,nv)*rho(i,k,j)
         enddo
            if(var_sum(i,j).gt.1.e-10 .and. var_sum_clw(i,j).gt.1.e-10 ) then
-   !        assuming that frc is onstant, it is my conversion factor 
-!       (just like in convec. parameterization
+            !assuming that frc is onstant, it is my conversion factor 
+            !just like in convec. parameterization
               frc(i,j)=rain_clw(i,j)/var_sum_clw(i,j)
 !    write(0,*)'frc ', frc(i,j),var_sum_clw(i,j),var_sum(i,j)
               if (lat(i,j)<=-55.) then
@@ -351,9 +351,8 @@ contains
 
 !    Find the highest model layer experiencing rainout.  Assumes no
 !    scavenging if T < 258 K
-     !LH = 0
      LH = k2+1
-     do k = k2, k1,-1
+     do k = k2, k1, -1
       if(dqcond(i,k,j) .lt. 0. .and. tmpu(i,k,j) .gt. 258.) then
        LH = k
        goto 15

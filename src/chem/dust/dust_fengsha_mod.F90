@@ -442,7 +442,6 @@ contains
             EXP(-(2.0*reff_dust(n)/lambda)**3.0)*dlndp(n)
        dvol_tot=dvol_tot+dvol(n)
        ! Convert mass flux to volume flux
-       ! emit_vol=emit/den_dust(n) ! (m s^-1)
     END DO
     DO n=1,nmx
        distr_dust(n)=dvol(n)/dvol_tot
@@ -461,8 +460,7 @@ contains
              ! Update dust mixing ratio at first model level.
              tc(i,j,1,n) = tc(i,j,1,n) + dsrc / airmas(i,j,1) ! (kg/kg)
              !   bems(i,j,n) = dsrc  ! diagnostic
-             !bems(i,j,n) = 1000.*dsrc/(dxy(j)*dt1) ! diagnostic (g/m2/s)
-             bems(i,j,n) = 1.e+9*dsrc/(dxy(j)*dt1) ! diagnostic (ug/m2/s) !lzhang
+             bems(i,j,n) = 1.e+9*dsrc/(dxy(j)*dt1) ! diagnostic (ug/m2/s)
           END DO
        END DO
     END DO
