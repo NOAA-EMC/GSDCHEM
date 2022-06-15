@@ -766,7 +766,7 @@ contains
      ! -- ls wet deposition
      select case (wetdep_ls_opt)
        case (WDLS_OPT_GSD)
-         call wetdep_ls(dt,chem,rnav,moist,rho_phy,var_rmv,     &
+         call wetdep_ls(dt,chem,rnav,moist,rho_phy,var_rmv,xlat,&
                         num_moist,num_chem,p_qc,p_qi,dz8w,vvel, &
                         ids,ide, jds,jde, kds,kde,              &
                         ims,ime, jms,jme, kms,kme,              &
